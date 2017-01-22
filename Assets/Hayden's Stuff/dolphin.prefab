@@ -37,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1445545953978722}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.9863329, y: -0.6569, z: 0}
-  m_LocalScale: {x: 0.24839216, y: 0.24839216, z: 0.24839216}
+  m_LocalPosition: {x: -6.8652654, y: -1.2693325, z: 0}
+  m_LocalScale: {x: 0.72579837, y: 0.7257994, z: 0.7257994}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 405658285606745e0afe8c38182f999a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dolphinSpeed: 1
+  dolphinSpeed: 7.18
   clip: {fileID: 8300000, guid: a0e083c2b39094e2296fbb87e7de51ef, type: 3}
 --- !u!212 &212426382186137392
 SpriteRenderer:

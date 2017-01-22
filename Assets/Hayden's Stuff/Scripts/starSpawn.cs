@@ -9,6 +9,8 @@ public class starSpawn : MonoBehaviour {
 	public float timerLength = 0f;
 	public float minTime = 5f;
 	public float maxTime = 10f;
+	public float minHeight;
+	public float maxHeight;
 	private float currentTime = 0;
 	private Transform starSpawnTransform;
 
@@ -20,7 +22,7 @@ public class starSpawn : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (currentTime > timerLength) {
-			float spawnY = Random.Range(1,3);
+			float spawnY = Random.Range(minHeight,maxHeight);
 			starSpawnTransform.position = new Vector3 (10.29f,spawnY);
 			int randomObject = Random.Range (1,3);
 			if (randomObject == 1) {
