@@ -31,7 +31,7 @@ public class GameManaer : MonoBehaviour {
     public static void SwitchToGame()
     {
         score = 0;
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("GameScene");
     }
 
     public static void SwitchToEnd()
