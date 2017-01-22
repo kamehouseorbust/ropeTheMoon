@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManaer : MonoBehaviour {
 
@@ -10,16 +11,15 @@ public class GameManaer : MonoBehaviour {
     public static readonly int END = 2;
 
     public static int currentState;
-    public float fadeTime = 2;
-    public bool isFaded = false;
-    public Image FadeImg;
+    public static int score;
+    
+    
 
 	// Use this for initialization
 	void Start () {
-        currentState = TITLE;
-        FadeIn();
-
+        DontDestroyOnLoad(this.gameObject);
 	}
+
 	
 	// Update is called once per frame
 	void Update () {
@@ -27,33 +27,43 @@ public class GameManaer : MonoBehaviour {
 	}
 
 
-    public static void SwitchState(int newState)
-    {
-        currentState = newState;
 
+    public static void SwitchToGame()
+    {
+        score = 0;
+        SceneManager.LoadScene("Game");
     }
 
-    private void SwitchToGame()
+    public static void SwitchToEnd()
     {
-
+        SceneManager.LoadScene("End");
     }
 
-    public void SwitchToEnd()
+    public static void SwitchToStart()
     {
-
+        SceneManager.LoadScene("EvenTide");
     }
 
-    public void SwitchToStart()
-    {
-
-    }
-
-    public void FadeIn()
+    /*public void FadeIn()
     {      
-           FadeImg.CrossFadeAlpha(0f, fadeTime, false);
+        FadeImg.CrossFadeAlpha(0f, fadeTime, false);
     }
     public void FadeOut()
     {
         FadeImg.CrossFadeAlpha(1f, fadeTime, false);
     }
+    public void AlphaOut(Canvas c)
+    {
+        c.gameObject.SetActive(false);
+    }
+    public void AlphaIn(Canvas c)
+    {
+        c.gameObject.SetActive(true);
+    }
+
+    IEnumerator Delay(float s)
+    {
+        yield return new WaitForSeconds(s);
+    }
+    */
 }
