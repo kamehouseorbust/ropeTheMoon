@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61882360547530398}
   - component: {fileID: 50235243337698770}
   - component: {fileID: 114657693500735328}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Lighthouse
   m_TagString: lighthouse
   m_Icon: {fileID: 0}

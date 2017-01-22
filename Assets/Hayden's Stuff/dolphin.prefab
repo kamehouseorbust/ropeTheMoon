@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61552680970568968}
   - component: {fileID: 50254811951375760}
   - component: {fileID: 114864859488235838}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: dolphin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
