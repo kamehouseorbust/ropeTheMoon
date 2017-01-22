@@ -24,7 +24,7 @@ public class ScoreAndHealthTracker : MonoBehaviour {
 	void Update () {
         currentScore += pointsPerSecond * Time.deltaTime;
         scoreText.text = "SCORE: " + getScore();
-        Debug.Log("Score: " + getScore());
+      //  Debug.Log("Score: " + getScore());
 		if(currentHealth <= 0)
         {
             GameManager.SetScore(getScore());
@@ -38,12 +38,12 @@ public class ScoreAndHealthTracker : MonoBehaviour {
         {
             currentScore += (float)pointsPerItem;
         }
-        else if(coll.gameObject.tag != "water" || coll.gameObject.tag != "Hit")
+        else if(coll.gameObject.tag != "water" && coll.gameObject.tag != "Hit")
         {
             currentHealth -= 1;
             coll.gameObject.tag = "Hit";
             Destroy(hits[currentHealth]);
-            Debug.Log("Health Lost");
+            Debug.Log(coll.gameObject.tag);
         }
     }
 

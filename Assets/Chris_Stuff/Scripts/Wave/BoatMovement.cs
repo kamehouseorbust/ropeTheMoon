@@ -24,7 +24,7 @@ public class BoatMovement : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.Space))
         {
             body.velocity = new Vector2(body.velocity.x, body.velocity.y - 2f); 
         }

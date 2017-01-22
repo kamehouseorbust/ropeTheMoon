@@ -23,13 +23,23 @@ public class starSpawn : MonoBehaviour {
 	void Update () {
 		if (currentTime > timerLength) {
 			float spawnY = Random.Range(minHeight,maxHeight);
-			starSpawnTransform.position = new Vector3 (10.29f,spawnY);
+			starSpawnTransform.position = new Vector3 (30.29f,spawnY);
 			int randomObject = Random.Range (1,3);
-			if (randomObject == 1) {
-				GameObject.Instantiate (starPrefab, transform.position, transform.rotation);
-			} else if (randomObject == 2) {
-				GameObject.Instantiate (ufoPrefab, transform.position, transform.rotation);
-			}
+            if (starSpawnTransform.position.y > 2)
+            {
+                if (randomObject == 1)
+                {
+                    GameObject.Instantiate(starPrefab, transform.position, transform.rotation);
+                }
+                else if (randomObject == 2)
+                {
+                    GameObject.Instantiate(ufoPrefab, transform.position, transform.rotation);
+                }
+            }else
+            {
+                GameObject.Instantiate(starPrefab, transform.position, transform.rotation);
+            }
+			
 			timerLength = Random.Range (minTime, maxTime);
 			currentTime = 0;
 		}

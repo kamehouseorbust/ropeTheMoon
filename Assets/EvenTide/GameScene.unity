@@ -270,7 +270,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1164151594
+  randomSeed: 1437455094
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3267,7 +3267,7 @@ MonoBehaviour:
   pointsPerItem: 20
   pointsPerSecond: 3
   scoreText: {fileID: 1049818229}
-  switcher: {fileID: 0}
+  switcher: {fileID: 1048265181}
   hits:
   - {fileID: 1557522772}
   - {fileID: 901099557}
@@ -3407,8 +3407,10 @@ MonoBehaviour:
   dolphinePrefab: {fileID: 1445545953978722, guid: 48e306ad7dc774e87b7cc9ab52ec8640,
     type: 2}
   timerLength: 0
-  minTime: 5
-  maxTime: 10
+  minTime: 3
+  maxTime: 5
+  minHeight: -25
+  maxHeight: 2
 --- !u!4 &670771105
 Transform:
   m_ObjectHideFlags: 0
@@ -4219,11 +4221,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4471625851284156, guid: ef6e807a104ea304eaf715770b4643b8, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -5.06
+      value: -4.1
       objectReference: {fileID: 0}
     - target: {fileID: 4471625851284156, guid: ef6e807a104ea304eaf715770b4643b8, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.64
       objectReference: {fileID: 0}
     - target: {fileID: 4471625851284156, guid: ef6e807a104ea304eaf715770b4643b8, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4372,6 +4374,20 @@ Prefab:
     - target: {fileID: 1476018399110712, guid: ef6e807a104ea304eaf715770b4643b8, type: 2}
       propertyPath: m_TagString
       value: water
+      objectReference: {fileID: 0}
+    - target: {fileID: 114367630920539916, guid: ef6e807a104ea304eaf715770b4643b8,
+        type: 2}
+      propertyPath: waterLineCurrentGlobalPos.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23032921084623802, guid: ef6e807a104ea304eaf715770b4643b8,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99cf32ddbd1cc2a418c5e2e44b32b0a1, type: 2}
+    - target: {fileID: 4471625851284156, guid: ef6e807a104ea304eaf715770b4643b8, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.71523315
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef6e807a104ea304eaf715770b4643b8, type: 2}
@@ -4828,8 +4844,10 @@ MonoBehaviour:
   starPrefab: {fileID: 1867916786952402, guid: edb57e1739a0040f591f0c41f3220734, type: 2}
   ufoPrefab: {fileID: 1551535566726176, guid: 939f7b1dced6642398ee45de1c3fac26, type: 2}
   timerLength: 0
-  minTime: 5
-  maxTime: 10
+  minTime: 2
+  maxTime: 4
+  minHeight: -6
+  maxHeight: 7
 --- !u!4 &2137662993
 Transform:
   m_ObjectHideFlags: 0

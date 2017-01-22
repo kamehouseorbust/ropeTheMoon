@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 170c14cc9e5084e7082bbefd6399040d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whaleSpeed: 16.2
+  whaleSpeed: 14
   clip: {fileID: 8300000, guid: 8b96dca4659bb498992220aa7cd7041d, type: 3}
 --- !u!212 &212215923520020336
 SpriteRenderer:

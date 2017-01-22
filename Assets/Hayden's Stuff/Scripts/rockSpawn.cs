@@ -25,10 +25,10 @@ public class rockSpawn : MonoBehaviour {
 	void Update () {
 		if (currentTime > timerLength) {
 			float spawnY = Random.Range(minHeight,maxHeight);
-			rockSpawnTransform.position = new Vector3 (20.51f,spawnY);
+			rockSpawnTransform.position = new Vector3 (30.51f,spawnY);
 			int rand = Random.Range (1,3);
 
-			if (-2.6 < rockSpawnTransform.position.y && rockSpawnTransform.position.y < 2) {
+			if (-2.6 < rockSpawnTransform.position.y && rockSpawnTransform.position.y < maxHeight) {
 				if (-1 < rockSpawnTransform.position.y && rockSpawnTransform.position.y < 0) {
 					if (rand == 1){ 
 						GameObject.Instantiate (dolphinePrefab, transform.position, transform.rotation);
@@ -42,14 +42,14 @@ public class rockSpawn : MonoBehaviour {
 			}
 
 
-			if (-25 < rockSpawnTransform.position.y && rockSpawnTransform.position.y < -2.3) {
-				if (-8 < rockSpawnTransform.position.y && rockSpawnTransform.position.y < -5) {
+			if (minHeight < rockSpawnTransform.position.y && rockSpawnTransform.position.y < -2.3) {
+				if (-8 < rockSpawnTransform.position.y && rockSpawnTransform.position.y < -7) {
 					if (rand == 1) {
-						
-					} else if (rand == 2) {
+                        GameObject.Instantiate(whalePrefab, transform.position, transform.rotation);
+                    } else if (rand == 2) {
 						GameObject.Instantiate (rockPrefab, transform.position, transform.rotation);
 					}
-				} else if (rockSpawnTransform.position.y > -5) {
+				} else if (rockSpawnTransform.position.y > -7) {
 					GameObject.Instantiate (whalePrefab, transform.position, transform.rotation);
 				} else {
 					GameObject.Instantiate (rockPrefab, transform.position, transform.rotation);

@@ -62,7 +62,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!68 &68826534274103444
 EdgeCollider2D:
   m_ObjectHideFlags: 1
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55386abd3c6d47c8bcd077322487720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rockSpeed: 6.09
+  rockSpeed: 8
   clip: {fileID: 8300000, guid: 57cec4d74730241758b448bacb996c5d, type: 3}
 --- !u!212 &212264704806278136
 SpriteRenderer:
