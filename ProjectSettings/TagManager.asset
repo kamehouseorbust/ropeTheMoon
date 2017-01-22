@@ -9,6 +9,7 @@ TagManager:
   - rock
   - lighthouse
   - ufo
+  - water
   layers:
   - Default
   - TransparentFX
