@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreAndHealthTracker : MonoBehaviour {
 
@@ -9,6 +10,8 @@ public class ScoreAndHealthTracker : MonoBehaviour {
     private int currentHealth;
     private float currentScore;
     public int pointsPerSecond = 3;
+    public Text scoreText;
+    public GameObject[] hits = new GameObject[3];
 
 	// Use this for initialization
 	void Start () {
@@ -19,10 +22,11 @@ public class ScoreAndHealthTracker : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         currentScore += pointsPerSecond * Time.deltaTime;
+        scoreText.text = "SCORE: " + getScore();
         Debug.Log("Score: " + getScore());
 		if(currentHealth <= 0)
         {
-            //call game over;
+            
         }
 	}
 
@@ -34,7 +38,8 @@ public class ScoreAndHealthTracker : MonoBehaviour {
         }
         else if(coll.gameObject.tag != "water")
         {
-            maxHealth -= 1;
+            currentHealth -= 1;
+            Destroy(hits[currentHealth]);
             Debug.Log("Health Lost");
         }
     }

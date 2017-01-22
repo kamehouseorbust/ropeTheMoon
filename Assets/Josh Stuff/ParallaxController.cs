@@ -20,7 +20,7 @@ public class ParallaxController : MonoBehaviour {
         float cityX = Mathf.Repeat(Time.time * cityScrollSpeed, 1);
         city.mainTextureOffset = new Vector2(cityX, 0);
 
-        float cloud1X = Mathf.Repeat(Time.time * cloud2ScrollSpeed, 1);
+        float cloud1X = Mathf.Repeat(Time.time * cloud1ScrollSpeed, 1);
         cloud1.mainTextureOffset = new Vector2(cloud1X, 0);
 
         float cloud2X = Mathf.Repeat(Time.time * cloud2ScrollSpeed, 1);
