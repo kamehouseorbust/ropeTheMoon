@@ -25,12 +25,10 @@ public class playermovementtest : MonoBehaviour {
 	}
 	void OnCollisionEnter2D(Collision2D coll){
 		if (coll.gameObject.tag == "star") {
-			Debug.Log ("Points!");
 			particleEffects.startColor = new Color(225,249,0);
 			particleEffects.Play ();
 		}
 		if (coll.gameObject.tag == "rock") {
-			Debug.Log ("Bam!");
 			particleEffects.startColor = new Color(255,0,0);
 			particleEffects.Play ();
 		}

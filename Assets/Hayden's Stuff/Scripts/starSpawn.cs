@@ -5,6 +5,7 @@ using UnityEngine;
 public class starSpawn : MonoBehaviour {
 
 	public GameObject starPrefab;
+	public GameObject ufoPrefab;
 	public float timerLength = 0f;
 	public float minTime = 5f;
 	public float maxTime = 10f;
@@ -21,7 +22,12 @@ public class starSpawn : MonoBehaviour {
 		if (currentTime > timerLength) {
 			float spawnY = Random.Range(1,3);
 			starSpawnTransform.position = new Vector3 (10.29f,spawnY);
-			GameObject.Instantiate (starPrefab,transform.position, transform.rotation);
+			int randomObject = Random.Range (1,3);
+			if (randomObject == 1) {
+				GameObject.Instantiate (starPrefab, transform.position, transform.rotation);
+			} else if (randomObject == 2) {
+				GameObject.Instantiate (ufoPrefab, transform.position, transform.rotation);
+			}
 			timerLength = Random.Range (minTime, maxTime);
 			currentTime = 0;
 		}

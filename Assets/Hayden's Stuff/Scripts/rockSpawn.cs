@@ -5,6 +5,9 @@ using UnityEngine;
 public class rockSpawn : MonoBehaviour {
 
 	public GameObject rockPrefab;
+	public GameObject lightHousePrefab;
+	public GameObject whalePrefab;
+	public GameObject dolphinePrefab;
 	public float timerLength = 0;
 	public float minTime = 5;
 	public float maxTime = 10;
@@ -21,7 +24,16 @@ public class rockSpawn : MonoBehaviour {
 		if (currentTime > timerLength) {
 			float spawnY = Random.Range(-1,-4);
 			rockSpawnTransform.position = new Vector3 (11.1f,spawnY);
-			GameObject.Instantiate (rockPrefab,transform.position, transform.rotation);
+			int randomObject = Random.Range (1,5);
+			if (randomObject == 1) {
+				GameObject.Instantiate (rockPrefab, transform.position, transform.rotation);
+			} else if (randomObject == 2) {
+				GameObject.Instantiate (lightHousePrefab, transform.position, transform.rotation);
+			} else if (randomObject == 3) {
+				GameObject.Instantiate (whalePrefab, transform.position, transform.rotation);
+			} else if (randomObject == 4) {
+				GameObject.Instantiate (dolphinePrefab, transform.position, transform.rotation);
+			}
 			timerLength = Random.Range (minTime, maxTime);
 			currentTime = 0;
 		}

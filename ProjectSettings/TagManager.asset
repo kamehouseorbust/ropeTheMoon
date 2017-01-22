@@ -7,6 +7,8 @@ TagManager:
   - killable
   - star
   - rock
+  - lighthouse
+  - ufo
   layers:
   - Default
   - TransparentFX
