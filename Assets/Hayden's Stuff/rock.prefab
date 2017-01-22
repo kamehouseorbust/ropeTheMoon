@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4935547401998966}
   - component: {fileID: 212264704806278136}
-  - component: {fileID: 61221232751870232}
   - component: {fileID: 50695176855251414}
   - component: {fileID: 114468651948049186}
+  - component: {fileID: 68826534274103444}
   m_Layer: 0
   m_Name: rock
   m_TagString: rock
@@ -63,8 +63,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61221232751870232
-BoxCollider2D:
+--- !u!68 &68826534274103444
+EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -75,8 +75,11 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Points:
+  - {x: -3.1746025, y: -1.4657321}
+  - {x: -0.1949215, y: 1.5220981}
+  - {x: 0.13062906, y: 1.5176893}
+  - {x: 3.2116194, y: -1.4592123}
 --- !u!114 &114468651948049186
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,6 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rockSpeed: 1
+  clip: {fileID: 8300000, guid: 57cec4d74730241758b448bacb996c5d, type: 3}
 --- !u!212 &212264704806278136
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -120,7 +124,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9124e1c19b8f649beb0e6f2b7df7b1ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7c4f265de920745c293e2d8fadb68099, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

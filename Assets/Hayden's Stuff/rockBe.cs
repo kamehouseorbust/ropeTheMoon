@@ -6,6 +6,7 @@ public class rockBe : MonoBehaviour {
 
 	private Transform rockTransform;
 	public float rockSpeed = 1f;
+	public AudioClip clip;
 
 	// Use this for initialization
 	void Start () {
@@ -18,11 +19,11 @@ public class rockBe : MonoBehaviour {
 	}
 	void OnCollisionEnter2D(Collision2D coll){
 		if (coll.gameObject.tag == "Player") {
-			Debug.Log ("Contact!");
+			AudioSource a = coll.gameObject.GetComponent<AudioSource> ();
+			a.PlayOneShot(clip);
 			Destroy (this.gameObject);
 		}
 		if (coll.gameObject.tag == "killable") {
-			Debug.Log ("Kill Contact!");
 			Destroy (this.gameObject);
 		}
 	}

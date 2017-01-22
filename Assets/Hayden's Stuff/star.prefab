@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4963138193265784}
   - component: {fileID: 212080908379542124}
-  - component: {fileID: 61654500318274612}
   - component: {fileID: 50375370525161282}
   - component: {fileID: 114711164373019354}
+  - component: {fileID: 68843585466608074}
   m_Layer: 0
   m_Name: star
   m_TagString: star
@@ -63,8 +63,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61654500318274612
-BoxCollider2D:
+--- !u!68 &68843585466608074
+EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -75,8 +75,12 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Points:
+  - {x: -0.185, y: 0}
+  - {x: 0.0013070107, y: 0.19136596}
+  - {x: 0.18608236, y: -0.0018913746}
+  - {x: 0.0056777, y: -0.19225407}
+  - {x: -0.19131088, y: -0.014591932}
 --- !u!114 &114711164373019354
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,6 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starSpeed: 1
+  clip: {fileID: 8300000, guid: a0e083c2b39094e2296fbb87e7de51ef, type: 3}
 --- !u!212 &212080908379542124
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -120,7 +125,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d4b0d6d9d658c4d869bad1a89c266c17, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f9127b4c878ec4df1a6f20bb48a01f13, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

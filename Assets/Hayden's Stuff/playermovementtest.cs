@@ -30,7 +30,7 @@ public class playermovementtest : MonoBehaviour {
 			particleEffects.Play ();
 		}
 		if (coll.gameObject.tag == "rock") {
-			Debug.Log ("Points!");
+			Debug.Log ("Bam!");
 			particleEffects.startColor = new Color(255,0,0);
 			particleEffects.Play ();
 		}
